@@ -44,9 +44,6 @@ $.ajax({
         result.results["4"].url + "</a>");
     $("#url5").append("<a href=" + result.results["5"].url + ">" +
         result.results["5"].url + "</a>");
-        
-
-
 
 }).fail(function (err) {
     throw err;
@@ -54,15 +51,3 @@ $.ajax({
 
 
 
-var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
-url += '?' + $.param({
-  'api-key': "2118d3827b3d449e94e71783ba06ee1a"
-});
-$.ajax({
-  url: url,
-  method: 'GET',
-}).done(function(nytSearch) {
-  console.log(nytSearch);
-}).fail(function(err) {
-  throw err;
-});
